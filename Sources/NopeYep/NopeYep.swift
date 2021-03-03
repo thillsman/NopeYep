@@ -8,7 +8,7 @@ extension Bool: ExpressibleByStringLiteral {
         case "yep","1","0 but true","👍","👍🏻","👍🏼","👍🏽","👍🏾","👍🏿":
             self = true
         case "maybe", "🤷🏼‍♂️":
-            self = [true, false].randomElement() ?? false
+            self = Bool.random()
         default:
             self = false
         }
