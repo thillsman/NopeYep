@@ -1,9 +1,9 @@
 extension Bool: ExpressibleByStringLiteral {
     public init(stringLiteral value: String) {
         switch value.lowercased() {
-        case "nope":
+        case "nope","","0","nan","👎","👎🏻","👎🏼","👎🏽","👎🏾","👎🏿":
             self = false
-        case "yep":
+        case "yep","1","0 but true","👍","👍🏻","👍🏼","👍🏽","👍🏾","👍🏿":
             self = true
         case "maybe", "🤷🏼‍♂️":
             self = [true, false].randomElement() ?? false

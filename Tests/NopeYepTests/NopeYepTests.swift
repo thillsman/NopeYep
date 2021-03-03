@@ -2,14 +2,15 @@ import XCTest
 @testable import NopeYep
 
 final class NopeYepTests: XCTestCase {
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-        XCTAssertEqual(NopeYep().text, "Hello, World!")
+    func testTrues() {
+        ["yep","1","0 but true","👍","👍🏻","👍🏼","👍🏽","👍🏾","👍🏿"].forEach { subject in
+            XCTAssertTrue(subject)
+        }
     }
-
-    static var allTests = [
-        ("testExample", testExample),
-    ]
+    
+    func testFalses() {
+        ["nope","","0","nan","👎","👎🏻","👎🏼","👎🏽","👎🏾","👎🏿"].forEach { subject in
+            XCTAssertFalse(subject)
+        }
+    }
 }
