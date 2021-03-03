@@ -1,6 +1,6 @@
 extension Bool: ExpressibleByStringLiteral {
     public init(stringLiteral value: String) {
-        switch value.lowercased() {
+        switch value.lowercased().trimmingCharacters(in: .whitespacesAndNewlines) {
         case "nope","","0","nan","👎","👎🏻","👎🏼","👎🏽","👎🏾","👎🏿":
             self = false
         case "yep","1","0 but true","👍","👍🏻","👍🏼","👍🏽","👍🏾","👍🏿":
