@@ -1,3 +1,3 @@
 # NopeYep
 
-A description of this package.
+Make `Bool` more fun.
