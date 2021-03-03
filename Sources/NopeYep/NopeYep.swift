@@ -1,3 +1,5 @@
+import Foundation
+
 extension Bool: ExpressibleByStringLiteral {
     public init(stringLiteral value: String) {
         switch value.lowercased().trimmingCharacters(in: .whitespacesAndNewlines) {
